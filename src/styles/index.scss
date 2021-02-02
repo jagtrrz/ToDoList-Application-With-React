@@ -1,6 +1,76 @@
 @import "~bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Asap:ital@1&display=swap');
 
-.imputList{
-    background-color: olive;
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+body {
+    background: linear-gradient(
+    90deg,
+    rgba(48, 16, 255, 1) 0%,
+    rgba(100, 115, 255, 1) 100%
+  );
+}
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 520px;
+    min-height: 600px;
+    background: #161a2b;
+    text-align: center;
+    margin: 2rem auto;
+    border-radius: 10px;
+    padding-bottom: 32px;
+}
+
+h1 {
+    text-align: center;
+    margin: 5rem 0;
+    color: #fff;
+    font-size: 4rem;
+    font-family: 'Architects Daughter', cursive;
+}
+
+form {
+  margin-bottom: 32px;
+}
+
+input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 10px 10px 0 0;
+  border: 2px solid #5d0cff;
+  outline: none;
+  width: 520px;
+  background: white;
+  color: #5d0cff;
+}
+
+input::placeholder {
+    color: #e2e2e2;
+}
+
+button {
+    padding: 16px;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    cursor: pointer;
+    outline: none;
+    background: linear-gradient(
+        90deg,
+        rgba(93, 12, 255, 1) 0%,
+        rgba(155, 0, 250, 1) 100%
+    );
+    color: #fff;
+    text-transform: capitalize;
+}
+ li{
+    color: white;
+    margin-top: 1rem;
+    //  list-style-type: none;
+ }
+
+

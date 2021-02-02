@@ -6,19 +6,6 @@ export function Home() {
 	const [listItems, setListItems] = useState([]);
 	const [currentValue, setValue] = useState("");
 
-	// listItems.map((item, index) => {
-	// 	return <Item name={setListItems({ currentValue })} key={index} />;
-	// });
-	// console.log(listItems);
-	// useEffect(
-	// 	() => {
-	// 		if (listItems.length > 0) {
-	// 			console.log("juan mola", listItems[0].name);
-	// 		}
-	// 	},
-	// 	[listItems]
-	// );
-
 	const test = e => {
 		if (e.key == "Enter") {
 			setListItems(listItems => [
@@ -50,6 +37,14 @@ export function Home() {
 			/>
 		);
 	});
+
+	// const removeTask = id => {
+	// 	const removedArr = [...listItems].filter(
+	// 		listItems => listItems.id !== id
+	// 	);
+
+	// 	setListItems(removedArr);
+	// };
 
 	return (
 		<Fragment>

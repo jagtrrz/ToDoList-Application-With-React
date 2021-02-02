@@ -8,7 +8,7 @@ export const Item = props => {
 			<button
 				onClick={props.onMyClick}
 				className="btn btn-secondary btn-lg disabled">
-				X
+				<i className="fa fa-trash" aria-hidden="true" />
 			</button>
 		</li>
 	);
