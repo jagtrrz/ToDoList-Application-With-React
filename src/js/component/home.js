@@ -6,7 +6,7 @@ export function Home() {
 	const [listItems, setListItems] = useState([]);
 	const [currentValue, setValue] = useState("");
 
-	const test = e => {
+	const generateTask = e => {
 		if (e.key == "Enter") {
 			setListItems(listItems => [
 				...listItems,
@@ -16,55 +16,63 @@ export function Home() {
 				}
 			]);
 			setValue("");
-			console.log(listItems);
 		}
 	};
 
-	const test2 = e => {
-		listItems.splice(e.target.id, 1);
-		console.log("hola", listItems);
+	const deleteTodo = id => {
+		const remove = listItems.filter((_, index) => index !== id);
+		setListItems(remove);
 	};
 
-	let prueba = listItems.map((item, index) => {
+	const counter = () => {
+		let counter = listItems.length;
+		counter == "0"
+			? (counter = "You don´t have any task to do")
+			: (counter = counter + " task(s) to do");
+		return counter;
+	};
+
+	let taskList = listItems.map((item, index) => {
 		return (
 			<Item
 				name={item.name}
 				key={index}
-				id={index}
-				onMyClick={e => {
-					test2(e);
+				id={index.toString()}
+				onMyClick={() => {
+					deleteTodo(index);
 				}}
 			/>
 		);
 	});
 
-	// const removeTask = id => {
-	// 	const removedArr = [...listItems].filter(
-	// 		listItems => listItems.id !== id
-	// 	);
-
-	// 	setListItems(removedArr);
-	// };
-
 	return (
 		<Fragment>
-			<form
-				onSubmit={e => {
-					e.preventDefault();
-				}}>
-				<input
-					type="text"
-					onChange={e => {
-						setValue(e.target.value);
-					}}
-					onKeyPress={e => {
-						test(e);
-					}}
-					placeholer="Put anotther TODO"
-					value={currentValue}
-				/>
-			</form>
-			<div>{prueba}</div>
+			<content className="container">
+				<div className="blackboard">
+					<h1>THINGS TO DO</h1>
+					<form
+						onSubmit={e => {
+							e.preventDefault();
+						}}>
+						<input
+							className="rounded"
+							type="text"
+							onChange={e => {
+								setValue(e.target.value);
+							}}
+							onKeyPress={e => {
+								generateTask(e);
+							}}
+							placeholder="Add a task to your list"
+							value={currentValue}
+						/>
+					</form>
+					<div className="todoList">
+						<ul>{taskList}</ul>
+					</div>
+					<div className="counter">{counter()}</div>
+				</div>
+			</content>
 		</Fragment>
 	);
 }

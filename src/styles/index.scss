@@ -1,76 +1,88 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Asap:ital@1&display=swap');
 
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 body {
-    background: linear-gradient(
-    90deg,
-    rgba(48, 16, 255, 1) 0%,
-    rgba(100, 115, 255, 1) 100%
-  );
+    margin-top: -2rem;
+    height: 100%;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/concrete-wall-background.jpg);
+	//background: url(https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80);
+    background-size: cover;
+    	font-family: 'Permanent Marker', cursive;
+		font-size: 1.6em;
+		color: rgba(238, 238, 238, 0.7);
 }
-#app {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    width: 520px;
-    min-height: 600px;
-    background: #161a2b;
-    text-align: center;
-    margin: 2rem auto;
-    border-radius: 10px;
-    padding-bottom: 32px;
+
+.blackboard {
+    position: relative;
+    width: 40rem;
+    margin: 7% auto;
+    border: tan solid 12px;
+    border-top: #bda27e solid 12px;
+    border-left: #b19876 solid 12px;
+    border-bottom: #c9ad86 solid 12px;
+    box-shadow: 0px 0px 6px 5px rgba(58, 18, 13, 0), 0px 0px 0px 2px #c2a782, 0px 0px 0px 4px #a58e6f, 3px 4px 8px 5px rgba(0, 0, 0, 0.5);
+    background-color: #007c64;
 }
 
 h1 {
     text-align: center;
-    margin: 5rem 0;
-    color: #fff;
-    font-size: 4rem;
-    font-family: 'Architects Daughter', cursive;
 }
 
-form {
-  margin-bottom: 32px;
+form{
+    display: flex;
+    justify-content: center;
 }
 
-input {
-  padding: 14px 32px 14px 16px;
-  border-radius: 10px 10px 0 0;
-  border: 2px solid #5d0cff;
-  outline: none;
-  width: 520px;
-  background: white;
-  color: #5d0cff;
-}
-
-input::placeholder {
-    color: #e2e2e2;
-}
-
-button {
-    padding: 16px;
+input{
+    vertical-align: middle;
+    background-color: #009b7d ;
     border: none;
-    border-radius: 10px 10px 10px 10px;
-    cursor: pointer;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    color: rgba(238, 238, 238, 0.7);
+    font-size: 1.6em;
+    line-height: .6em;
     outline: none;
-    background: linear-gradient(
-        90deg,
-        rgba(93, 12, 255, 1) 0%,
-        rgba(155, 0, 250, 1) 100%
-    );
-    color: #fff;
-    text-transform: capitalize;
 }
- li{
-    color: white;
-    margin-top: 1rem;
-    //  list-style-type: none;
- }
+.todoList{
+    display: flex;
+    justify-content: center;
+   
+}
+ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 2.5rem;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0 0.5rem 1rem;
+    
+}
+
+i{
+    background-color: none;
+    color: rgba(238, 238, 238, 0.7);
+}
+button {
+    justify-content: end;
+}
+
+.counter {
+    text-align: center;
+    margin-left: 0 1rem 0 1rem;
+}
+
+
+
+
+
+
+
+
 
 

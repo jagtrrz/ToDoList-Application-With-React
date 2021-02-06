@@ -5,9 +5,7 @@ export const Item = props => {
 	return (
 		<li>
 			{props.name}{" "}
-			<button
-				onClick={props.onMyClick}
-				className="btn btn-secondary btn-lg disabled">
+			<button onClick={props.onMyClick} className="btn btn-lg">
 				<i className="fa fa-trash" aria-hidden="true" />
 			</button>
 		</li>
